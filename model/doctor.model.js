@@ -17,6 +17,9 @@ let doctorSchema = new Schema({
     adresse: {
         type: String
     },
+    stadt: {
+        type: String
+    },
     telefonnummer: {
         type: String
     },
@@ -26,7 +29,10 @@ let doctorSchema = new Schema({
 },
     {
         collection: 'doctor'
+    },
+    {
+        timestaps: true
     }
-)
+);
 
 module.exports = mongoose.model('doctorSchema', doctorSchema)
